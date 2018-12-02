@@ -1,0 +1,15 @@
+<div class="item">
+    <h2>Name: <%= link_to item.name, item %></h2>
+    <% if item.image.present? %>
+        <p>
+            <%= image_tag item.image%>
+        </p>
+    <% end %>
+    <ul>
+        <li>Id: <%= item.id %></li>
+        <li>Description: <%= item.description %>
+        <li>Stats: <%= item.stats %></li>
+        <li>Stock: <%= item.stock %></li>
+        <li>Price: <%= item.price %></li>
+    </ul>
+</div>

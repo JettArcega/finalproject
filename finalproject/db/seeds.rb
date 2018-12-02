@@ -29,7 +29,8 @@ lol_item_parse.each do |i|
             tag: i['tags'],
             stats: stats,
             stock: Faker::Number.between(5,20),
-            price: i['price']['total'])
+            price: i['price']['total'],
+            image: i['icon'])
     end
 end
 

@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <header>
+      <h1>League of Legends Item Shop</h1>
+      <div class="topnav">
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'About', 'about' %>
+      </div>
+    </header>
     <%= yield %>
+
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright © Jett Website 2018
+      </div>
+    </footer>
   </body>
 </html>

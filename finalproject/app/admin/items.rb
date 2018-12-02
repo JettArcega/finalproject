@@ -12,5 +12,5 @@ ActiveAdmin.register Item do
 #   permitted
 # end
 
-permit_params :name, :description, :stock, :price
+permit_params :name, :description, :stock, :price, :image
 end

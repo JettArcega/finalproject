@@ -1,9 +1,2 @@
-<div class="item">
-    <ul>
-        <li>Name: <%= link_to @items.name, @items %></li>
-        <li>Description: <%= @items.description %></li>
-        <li>Stats: <%= @items.stats %></li>
-        <li>Stock: <%= @items.stock %></li>
-        <li>Price: <%= @items.price %></li>
-    </ul>
-</div>
+<%= render partial: 'item', member: @items, locals: {:item => @items} %>
+<%= link_to 'Back', root_path %>
