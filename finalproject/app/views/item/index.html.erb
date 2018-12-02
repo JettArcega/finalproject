@@ -1,0 +1,14 @@
+<h1>League of Legends Items</h1>
+
+<%  @item.each do |i| %>
+    <div class="item">
+        <ul>
+        <li>Id: <%= i.id %></li>
+        <li>Name: <%= link_to i.name, i %></li>
+        <li>Description: <%= i.description %></li>
+        <li>Stats: <%= i.stats %></li>
+        <li>Stock: <%= i.stock %></li>
+        <li>Price: <%= i.price %></li>
+        </ul>
+    </div>
+<% end %>

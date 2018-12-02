@@ -20,10 +20,15 @@ lol_item_parse.each do |i|
     if i['price']['total'] == 0
         puts "#{ i['name'] } was not included."
     else
+        stats = "N/A"
+        i['stats'].each do |s|
+            stats = "#{s.first}: #{s.second}"
+        end
         Item.create(name: i['name'],
-            description: i['description'],
-            tag: ['tags'],
-            stock: Faker::Number.between(1,20),
+            description: i['plaintext'],
+            tag: i['tags'],
+            stats: stats,
+            stock: Faker::Number.between(5,20),
             price: i['price']['total'])
     end
 end
